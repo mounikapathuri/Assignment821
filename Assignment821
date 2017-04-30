@@ -1,0 +1,31 @@
+package assi8;//using thread//
+import java.util.Scanner;
+	class Assignment821{
+		public static void main(String args[]){
+			prime r1=new prime();
+			r1.start();
+			} 
+		}
+	class prime extends Thread{
+		public void run(){
+			Scanner sc=new Scanner(System.in);
+			int num;
+			System.out.println("Enter a number to check wether it is prime or not");
+			num=sc.nextInt();
+			boolean isPrime=true;
+			for(int i=2;i<num;i++){
+				if(num%i==0){
+					isPrime=false;
+				}
+			}
+			if(isPrime){
+				System.out.println(num+" is a prime number");	
+			}
+			else{
+				System.out.println(num+" is not a prime number");
+			}
+			
+		}
+	}
+
+
